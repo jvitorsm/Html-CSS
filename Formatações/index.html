@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatação</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+             /*A cor utilizada no exemplo é a cor default da tag, o intuito dela na contrução é meramente demonstrativo*/
+        mark{
+            background-color: yellow;
+        }
+    </style>
+     <!--A cor utilizada no exemplo é a cor default da tag, o intuito dela na contrução é meramente demonstrativo-->
+</head>
+<body>
+    <h1>Principais formatações</h1>
+    <h2>Negrito/Destaque</h2>
+    <p>Para a aplicação do texto negrito, usamos a tag: &lt;b&gt;. Este estilo de destaque é muito usado para destacar um <b>termo</b> ou frases que devem ter uma atenção especial do leito.
+    <p>Contudo vimos que Html5 é uma linguagem semêntica, e a tag utilizada acima é uma tag <strong>Não Semântica</strong>.Com isso temos uma segunda forma de destacar o texto dessa mesma forma que é usando a tag: <strong>&lt;strong&gt;</strong>
+    </p>
+    <p>Observe que no primeiro parágrafo temos uma palavra destacada pela ta &lt;b&gt; e no segundo temos duas palavras destacadas com &lt;strong&gt;. Não há diferenças visuasi somente maneiras de se contrui. Mas lembre-se de que se Html5 também é tido por html semântico, priorizar tags semânticas pode ser uma boa.
+    </p>
+    <h2>Itálico/Ênfase</h2>
+    <p>Outra formatação textual muito comun é o itálico. Vemos muito em alguns nomes científicos de animais, citações em livros, notas de roda-pé. Há tambem duas fomras de fazer isso: a semântica(&lt;en&gt;) e a não semântica(&lt;i&gt;)
+    </p>
+    <p><i>Não Semântica: quando queremos envelopar um termo ou constuções com alguma tag podemos selecionar o que queremos atribui a tag, ir na barra de pesquisa pressionando crtl shift e p, procurando por abb(wrap with abbreviation, ou envelope com a abreviação), digitamos o atalho da tag e confirmamos</i></p><hr>
+    <p><en>Semântica:quando queremos envelopar um termo ou constuções com alguma tag podemos selecionar o que queremos atribui a tag, ir na barra de pesquisa pressionando crtl shift e p, procurando por abb(wrap with abbreviation, ou envelope com a abreviação), digitamos o atalho da tag e confirmamos</en></p>
+    <p>Quando vemos o sentido do que está dentro da tag podemos ver que o "b" na tag do negrito faz referência a bolt modo como é chamado esta forma. Mas quando olhamos a semântica, "strong" faz mais sentido pois queremos destacar aquilo que marcamos com a tag deixando uma escrita "forte"</p>
+    <p>Observando agora o itálico, o "i" da tag vem da palavra <en>itallic</en>, nome que recebe esta forma. Enqunto o "en" da tag semântica vem palavra: "enpahsis", oque diz o que significa aquela formatação: naquela parte do texto.</p>
+    <hr>
+    <h2>Tetxo Marcado</h2>
+    <p>O texto marcado é uma nova implementação do Html, para isso ultilizamos a tag: <mark>"mark"</mark>.Esta tag assim como várias possui o parâmetro style do CSS que é usado para mudar a coloração do marcador. para isso usamos a seguinte cpntrução:</p>
+    <p><mark style="background-color: aqua;">&lt;mark style="background-color: aqua;"&gt;</mark></p>
+    <p><mark style="background-color: blue;color:aliceblue;">&lt;mark style="background-color: blue;"&gt;</mark></p>
+    <p><mark style="background-color: lime ;">&lt;mark style="background-color: lime;"&gt;</mark></p>
+    <p><mark style="background-color:orangered;">&lt;mark style="background-color: orangered;"&gt;</mark></p>
+    <p><mark style="background-color:grey;">&lt;mark style="background-color: grey;"&gt;</mark></p>
+    <p>Para alterar a cor padrão da marcação uma tag mark devereá ser aberta no head do html com o seletor mark alterando-a para a cor desejada.</p>
+    <p>&lt;style&gt;<br> 
+    mark{"background-color:<en>ecor desejada</en>;"}<br> 
+    &lt;/style&gt;</p>
+<hr>
+    <h2>Texto Grande e Pequeno</h2>
+<p>O tamanho do seu texto também pode ser alterado usando html, e dentro dessas formatações temos o texto grande e o texto pequeno. No texto grande a tag "big" entrou em desuso devido a falta de samêntica da mesma, porém a tag "samall" permance não-obsoleta. Isso porque em algusn documentos as letras de rodapé ou observações são escritas em letras menores muitas vezes chamdas de letras pequenas(small print ou fine print)</p>
+<p><big>Texto grande não semantico</big><br>
+<small>Texto pequeno e semântico</small></p>
+<hr>
+<h2>Texto Deletado</h2>
+<p>Junto das formatações podemos marcar um texto como excluído, às vezes queremos que o leitor do conteúdo esteja ciente do que estava ali mas, não queremos que ele considere mais podemos marcar ele como excluído com a tag:"del"<br><del>Texto Excluído</del></p>
+<h2>Texto iserido</h2>
+<hr>
+<p>Juntamente com o texto excluído temos o texto inserido em que desejamos que o leitor tenha noção do que foi adcionado ao conteúdo, ou dando ênfase em algo que escrevemos ali. Para isso marcamos o texto com a tag: "ins". Nesta tag, assim como na tag "u" o que foi marcado ficará sublinhado, porém a tag "u" não tem valor semântico enquanto "ins" possui sigificado prático do que está sendo marcado ali. <br><ins>Texto iserido</ins></p>
+<hr>
+<h2>Texto Sobrescrito</h2>
+<p>Um exemplo prático do que é isso é em equações matemáticas, como por exemplo quando temos um número elevado a outro. Qunado não temos muitas opções constumeiramente representavamos assim: x^y.mas podemos usar a tag: "sup"<br> x<sup>y</sup></p>
+<hr>
+<h2>Texto Subescrito</h2>
+<p>Já o subescrito é o contrário,um caractér menor so que localizado abaixo da algarismo/simbolo que o acompanha. Nas fórmulas químicas texto subescritos são comuns como por exemplo:<br>CuH<sub>2</sub>SO<sub>4</sub></p>
+<p></p>
+</body>
+</html>
