@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citações e Códigos</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body{
+            background-color: black;
+        }
+        h1{
+            color: white;
+        }
+        h2{
+            color: white;
+        }
+        p{color: white;}
+        
+        code{color: white;}
+        blockquote{color: white;}
+    </style>
+</head>
+<body>
+    <h1>Formatações</h1>
+    <h2>Code</h2>
+    <p>Por padrão, a fonte de exibição, não é uma fonte monoespaçada. Logo alguns desenvolvedores optam por destacar um pedaço do texto usando a tag <code>&lt;code&gt;</code></p>
+    <p>A tag code por outro lado é uma tag monoespaçada que facilitta muitas vezes a leitura de certos trexos. Muito Usada para citar um bloco de código</p>
+<pre>
+    <code>
+#include &lt;iostream&gt;
+using namespace std;
+int main()
+{
+        // type conversion = coversion a value of a data type to another
+        //              Implicit = automatic
+        //              Explicit = Precede value with the new data type
+
+    //double x = (int)3.14;
+
+
+//  Quando castamos um numero em uma variavel do tipo char esse 
+//numero é convertido para um caracter equivalente em decimal
+    
+    char x = 80;
+
+cout &lt;&lt; x &lt;&lt; '\n';
+
+    int correct = 8;
+    int questions =10;
+    double score = correct/(double)questions*100;
+
+
+cout &lt;&lt; "Your score is: "&lt;&lt; score &lt;&lt;" %"&lt;&lt; '\n';
+
+    return 0;
+}
+    </code>
+</pre>
+<p>Contudo deve-se tomar cuidado com as identações. Caso use a tag "code" e simplesmente escrever os código entre ela, vc verá que o texto do código será tanscrito sequencialmente sem quebra de linha e sem identação. Para melhorara esse aspectos podemos envelopar a tag "code" com a tag "pre". Essa tag preserva as quebras de linha, tabs e tudo que for marcação espacial. mas deve ser observado que a contagem começa da margem. Então certifiqque-se que a margem 0 do seu código fique alinhada com a margem 0 do seu editor</p>
+<hr>
+<h2>Citações</h2>
+<p>Mais a fundo no que tangem as formatações temos as citações, são frases ou textos referenciados a terceiros.</p>
+<p><q>A verdadeira coragem é viver e morrer por aquilo que você acredita</q> -Christopher Paolini</p>
+<p>Com isso podemos voltar a discussão de uma marcação semântica. Quando usamos aspas cruas, nos marcamos semânticamente aquele desenvolvimento. O que viabiliza uma leitura clara do seu trabalho, uma acessibilidade maior e a capacidade de manipulações direcionadas. Como por exemplo você usar o seletor em CSS para modificar as fontes das suas citações.</p>
+<p>Outro mecanismo de citação é o "blockquote". Essa tag desloca o texto e o formata de forma diferente, pois este entede que é uma citação ou de obras litararias, artigos e outras fontes. Esse mecaniosmo abre a possibilidade de linkar um endereço de onde essa citação foi retirada de maneira que o prorpio mecanismo de busca fique linkado com o site: </p>
+<p>Como dito no livro: "Data Science para Negócios", de Foster Provos & Tom Fawcett:</p>
+    <blockquote cite="https://www.amazon.com.br/Data-Science-Business-Data-Analytic-Thinking/dp/1449361323/ref=asc_df_1449361323/?tag=googleshopp00-20&linkCode=df0&hvadid=379726347250&hvpos=&hvnetw=g&hvrand=7379269128273810751&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001552&hvtargid=pla-448095044074&psc=1&mcid=a6cb0801a8c73fc3a46eedd4016bb5ba">Em geral, um modelo é uma representação simplificada da realidade criada
+        para servir um propósito. Ele é simplificado com base em alguns
+        pressupostos sobre o que é e o que não é importante para a finalidade
+        específica ou, às vezes, com base nas limitações de informações ou
+        tratabilidade. Por exemplo, um mapa é um modelo do mundo físico.</blockquote>
+</p>
+<hr>
+<h2>Abreviações</h2>
+<p>Quando usamos sigla ou abreviações em certos contextos é comum darmos sentido aquela sigla na primeiravez que a usamos, para o leitor ficar ciênte do que estamos nos referindo. Da mesma forma podemos falar pros mecanismos de busca o que aquela abreviação significa. Para isso temos a tag "abbr". Por exemplo:</p>
+
+<p><abbr title="Hypertext Markup Language">HTML</abbr> é a linguagem padrão usada para criar e projetar páginas da web. Desenvolvido pelo <abbr title="World Wide Web Consortium">W3C</abbr>, HTML fornece uma estrutura básica que permite a marcação de conteúdo, como texto, imagens, links, formulários e outros elementos, para serem exibidos em um navegador da web.</p>
+<hr>
+<h2>FOR FUN/Curiosidade</h2>
+<p>Há uma tag chamada "bdo", Não consigo pensar em nenhuma usuabilidade diaria e prática mas ela inverte seu texto....Só isso mesmo... Talvés em outros idiomas como árabe que a ordem de leitura é invertida faça sentido. Talvez.</p>
+<p><bdo dir="rtl">Há uma tag chamada "bdo", Não consigo pensar em nenhuma usuabilidade diaria e prática mas ela inverte seu texto....Só isso mesmo...</bdo></p>
+
+</body>
+</html>
