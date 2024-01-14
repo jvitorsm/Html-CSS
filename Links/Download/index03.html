@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links para download</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body{background-color: black;}
+        p{color: white;}
+        h1{color: white;}
+        h2{color: white;}
+    </style>
+</head>
+<body>
+    <h1>Links Para Download</h1>
+    <p>Se os links são um ponto muito importante para o Html, os conteúdos de download são parte fundamental na navegação web. Desde artigos e textos até softwares e programas.</p>
+    <p>Para isso basta enveloparmos uma determinada parte do texto com a tag de links adicionando o atributo "download" e como valor o nome do arquivo</p>
+    <p>Cada navegador tem um comportamento diferente para isso alguns não baixam automáticamente, so abrem o conteudo em uma nova guia, outros podem baixar automáticamente.</p>
+    <p>Então outro atributo a ser adicionado é o type. que vai redceber valores dependendo do tipo de arquivo. Para cada tipo esse valor muda. Para consultao os valores podemos consultar o site: <a href="https://www.iana.org/assignments/media-types/media-types.xml" target="_blank" rel="external">https://www.iana.org/assignments/media-types</a> </p>
+    <p>Para esse exemplo vamos fazer o Download das imagens usadas no documento do conteudo: anexação de imagens, e também o corpo Html em pdf desse conteúdo.</p>
+    <ul>
+        <li><a href="../imagem.jpg" target="_blank" download="../imagem.jpg" type="image/jpeg">Imagem 1</a></li>
+        <li><a href="../imagem2.jpg" target="_blank" download="../imagem2" type="image/jpeg">Imagem 2</a></li>
+        <li><a href="../anexoimg.pdf" target="_blank" download="anexoimg.pdf" type="aplication/pdf">Código</a></li>
+    </ul>
+
+
+    <p><a href="..\index.html">Voltar a Página inicial</a></p>
+</body>
+</html>

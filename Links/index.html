@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+</head>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<style>
+body{background-color: black;}
+p{color: white;}
+h1{color: white;}
+h2{color: white;}
+</style>
+<body>
+    <h1>Ligações e Hiperlinks</h1>
+<p>Links são um dos recursos mais antigos da web. Todos nós tivemos inúmeros contatos com ees tipo de recurso. Quando clicamos em uma parte do texto com um endereço web e somos redirecionados a uma nova página, ou uma determinada altura da barra de rolamento, isso são links. Link do ingles vem de ligação, conexão. e é isso que fazemos quando adicionamos links clicáveis aos nossos desenvolvimentos web, ligamos dois pontos diferentes da World Wide Web.</p>
+<h2>Utilidades</h2>
+<p>Desde a praticidade ao usuário em facilitar uma navegaçã teleguiada aos conteúdos de interesse, até aos mecanismos de busca do google os links são parte fundamental da página.</p>
+<p>O google usa algoritimos de varredura de sites validos procurando por links para aumentar sua base de dados para melhora de pesquisas. Um exemplo de cliente, Digamos que pela parte do usuário, ele esta lendo sobre um determinado conteúdo em uma página web quando se depara com um termo ou uma referência que ele não tem conhecimento sobre, quando damos a opção de clicar em um link para ser redirecionado a uma página explicativa a respeito daquele conteúdo, torna a navegação fluúida e direta para o cliente.</p>
+<h2>Adicionado um hiperlink</h2>
+<p>Para fazermos essa ligação utilizamos a tag <code>&lt;a&gt;</code>. Nesta tag o principal atributo é o href que vai ditar o endereço web. Entre a abertura e o fechamento da tag colocamos o pedaço do texto que será clicável, para que haja o redirecionamento. Seguindo essa formatação:<br><code>&lt;a href= "https://exemplo.com"&gt; exemplo &lt;/a&gt;</code> </p>
+<p>Assim, podemos acessar uma pagina web clicando em uma determinada palavra ou frase. Por exemplo: <br>Acesse o meu conteúdo de <a href="https://github.com/jvitorsm/Html-CSS"> Html e CSS</a></p>
+<h2>Idioma</h2>
+<p>Outro atributo muito útil principalmente para os mecanismos de busca é a espicificação do idioma da página web lincada. Esse atributo é demarcado por "hreflang" dendtro da abertura da tag: <br> <code>&lt;a href= "https://exemplo.com" hreflang = "pt-br"&gt; exemplo &lt;/a&gt;</code></p>
+<p>Isso facilita para que os mecanismos de busca identifique a linguagem associada, pois visualmente na página não há alterações. Veja <br> Acesse meu conteúdo de <a href="https://github.com/jvitorsm/Html-CSS" hreflang="pt-br"> Html e CSS</a></p>
+<h2>Decidindo como a nova Página será aberta</h2>
+<p>Por padrão quando adicionamos um link e acessamos ele, o conteúdo da página atual será substituído pelo conteúdo da página referenciada pelo link. Isso pode ser interessante quando queremos que o cliente seja redirecionado para um novo documento do mesmo site. Como por exemplo abas de uma loja online. Mas quando não faz sentido redirecionar a página na mesma aba podemos alterar a maneira de abrir o link pela atributo: "target".</p>
+<p>
+Esse atributo pode receber os seguintes valores: <br>
+_blank: abre o link em uma janela em branco <br>
+_self: abre o lin na mesma janela da página atual do conteúdo(padrão)
+_top: vai desfazer os frames e abrir o link em um navegador vazio
+_parent: também abre o link em um navegador completo mas referenciada pela aba "mãe"
+nome do frame: abre o link na aba nomeada pelo atributo
+</p>
+<p>Tido que o uso de frame é algo que está em desuso, geralmente utiliza-se o target padrão e o _blank</p>
+<p>Acesse o Link do conteudo <a href="https://github.com/jvitorsm/Html-CSS" target="_self" rel="external">Html e CSS</a> em uma nova janela</p>
+<p>Acesse o Link do conteudo <a href="https://github.com/jvitorsm/Html-CSS" target="_blank" rel="external">Html e CSS</a> em uma nova guia</p>
+<p>Observa-se també que quando se trata de um link externo foi adicionado um atributo "rel", que tem por função mostrar qual a relação desse link atribuído.</p>
+
+
+<h2>Links internos</h2>
+<p>Até agora, tratamos links externos. Ou seja, links que redirecionam para uma página externa aquela a qual o cliente está. Mas existe também a relação de links internos que são aqules que não tiram o cliente do site mas sim o coloca em contato com outro arquivo desenvolvido para a mesma página web.</p>
+
+<p>Para isso o primeiro requisito, é que um novo documento seja criado dentro do diretório do arquivo em desenvolvimento. Neste caso em questão foi criado um arquivo nomeado de index02, onde está destacado o uso do rel. para acessarmos o link envelopamos o termo com a tag "a" e no atributo href colocamos o nome do arquivo que queremos acessar:</p> 
+    <p><code>&lt;a href="index02.html" target="_self" rel="next"&gt;Acesse o o conteúdo a respeito do atributo "rel" para a tag "a"&lt;/a&gt;</code></p>
+<a href="index02.html" target="_self" rel="next">Acesse o o conteúdo a respeito do atributo "rel" para a tag "a"</a></p>
+<p>Por último, quando colocamos o arquivo dentro de uma nova pasta no diretório, a referencia dentro da tag deverá vir com o caminho para a pasta.</p>
+<p>Vamos fazer o seguinte: O próximo conterúdo a ser tratado são os links de Download. Para isso criarei uma nova pasta dentro deste diretório para Nos redirecionarmos a ele e deixar aqui como exemplo. Dito isso, para selecionarmos um arqivo na dentro de uma outra pasta a configuração da tag fica da seguinte maneira:</p>
+<p><code>&lt;a href="Nome da Pasta/index03.html" target="_self" rel="next"&gt;texto&lt;/a&gt;</code></p>
+
+<p><a href="Download/index03.html" target="_self" rel="next">Acesse aqui o Conteudo de links para download</a></p>
+</body>
+</html>
