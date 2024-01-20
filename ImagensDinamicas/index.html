@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <title>Imagens Dinâmicas e Vídeos</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body{background-color: black;}
+        h1{color: white;}
+        p{color: white;}
+        code{color: white;}
+        h2{color: white;}
+        h3{color: white;}
+        a{color: #6A5ACD;} /*SlateBlue*/
+    </style>
+</head>
+<body>
+    <h1>Imagens Dinâmicas</h1>
+    <p>No desenvolvimento de sites, é muito importante o redimensionamento de imagens, uma vez que quando fazemos uma págia e adicionamos imagem a ela, diferentes dispositivos com diferentes resoluções de tela podem acrretar em certas situações como um redimensionamento forçado da mídia por CSS. O que não diminuirá o tamanho em bytes da imagem, tornando o site mais pesado.</p>
+    <p>Vamos olhar então o funcionamento da tag "picture" e "source":</p>
+    <hr>
+    <h2>Picture</h2>
+    <p>A tag picture permite que adicionamos algumas tags adicionais dentro dela para especificarmos como queremos que essa imagem seja carregada.</p>
+    <h3>Carregando uma imagem</h3>
+    <p>Usando o picture, criamos a tag envelopando a tag  "img" vista nos conteúdos anteriores. Por padrão a imagem será carregada com a dimensão de 1000px / 1000px</p>
+    <p>Usaremos uma imagem genérica da internet para exemplificarmos. Essa imagem foi redimensionada em 3 diferentes imagens:300x300, 700x700, 1000x1000</p>
+<pre>
+    <code>
+    &lt;picture&gt;
+        &lt;img src="imagem.jpg" alt="imagem exemplo"&gt;
+    &lt;/picture&gt;
+    </code>;
+</pre>
+<hr>
+<h3>Imagem em 300x300</h3>
+<picture>
+    <img src="Imagens/Img300.png" alt="imagem exemplo 300px">
+</picture>
+<hr>
+<h3>Imagem em 700x700</h3>
+<picture>
+    <img src="Imagens/Img700.png" alt="imagem exemplo 700px">
+</picture>
+<hr>
+<h3>Imagem em 1000x1000</h3>
+<picture>
+    <img src="Imagens/Img1000.png" alt="imagem exemplo 1000px">
+</picture>
+<hr>
+<h2>Source</h2>
+<p>Observe que as duas ultimas imagens já estão bem grandes no display do navegador, e caso esteja em uma tela com resolução próxima aos 1000px, a imagem vai ultrapassar os limites da tela adicionando a automáticamente à página, uma barra de rolamento lateral. Para resolvermos esse problema vamos adicionar a tag "source"</p>
+<pre>
+<code>
+    &lt;picture&gt;
+    &lt;source media="(max-width: 1050px)" srcset="fotoredimensionada.png" type="image/png"&gt; 
+    &lt;img src="imagem.jpg" alt="imagem exemplo"&gt;
+    &lt;/picture&gt;
+    </code>
+</pre>
+<p>Note que a tag source possui 3 atributos: <br>
+-media: indica o tamanho máximo, ou mínimo, que a imagem acessada tag "img" será carregada <br>
+-srcset: Mostra qual a imagem a página deve carregar uma vez que o tamanho da tela foi alterada para além do limite da tag:"media". <br>
+-type: que como vimos em <a href="https://github.com/jvitorsm/Html-CSS/tree/main/Links" target="_blank" rel="external">conteúdos anteriores(links)</a>, descreve o tipo de media associada 
+</p>
+<hr>
+<h3>Redimensionamento 1000px</h3>
+
+<picture>
+    <source media="(max-width: 1000px)" srcset="Imagens/Img700.png" type="image/png">
+    <img src="Imagens/Img1000.png" alt="imagem exemplo 1000px">
+</picture>
+
+<p>Observe que quando a medida que mudamos o tamanho da tela a imagem acompanha a proporção da tela, e ao ultrapassar o limite estabelecido pela tag "source" outra imagem é carregada com a proporção certa para aquela tela.</p>
+<hr>
+<h3>Garregando Imagem multi-redimensionada</h3>
+<p>Vamos adicionar mais um source, e para cada source a imagem redimensionada é renomeada. Pra isso existe uma hierarquia: o source com menor max-width vem acima e por ultimo vem a imagem a ser carregada:</p>
+
+<pre>
+<code>
+&lt;picture&gt;
+    &lt;source media="(max-width: 750px)" srcset="foto-g.png" type="image/png"&gt;
+    &lt;source media="(max-width: 1050px)" srcset="foto-m.png" type="image/png"&gt;
+    &lt;img src="imagem1000.png" alt="imagem exemplo 1000px"&gt;
+&lt;/picture&gt;
+</code>
+</pre>
+<p>Caso tente inverter as ordens do source, você verá que a a imagem menor fora do lugar, não sera carregada.</p>
+<p>O multi redimensionamento, é usado quando temos mais de dois arquivos de imagens para ser carregadas em páginas web em diferentes dispositivos.</p>
+<p> Por padrão é sempre bom evitar deslocamento lateral da página web. Pra oferecer um experiencia mai fluída para o usuário. Com isso, podemos colocar no max width, 50 px a mais do tamanho da média para que a barra de rolamento nem se quer apareça.</p>
+<picture>
+    <source media="(max-width: 750px)" srcset="Imagens/Img300.png" type="image/png">
+    <source media="(max-width: 1000px)" srcset="Imagens/Img700.png" type="image/png">
+    <img src="Imagens/Img1000.png" alt="imagem exemplo 1000px">
+</picture>
+</body>
+</html>
