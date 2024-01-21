@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: antiquewhite;
+        }
+    </style>
+    <title>Audio</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <h1>Anexo de áudio</h1>
+    <p>Um recurso muito usado por sites são os anexos de áudio. Muito usado por compiladores de podcast, O Html 5 nos da
+        a possibilidade de anexar áudio no nossos sites sem usar plug-ins e scripts em Java Script.</p>
+    <p>Para anexarmos áudio usamos a tag:"audio". Essa tag carrega consigo alguns parâmetros para controlar a maneira
+        que o áudio será tocado. O primeiro modo é uma maneira resumida de inicializarmos um áudio. Marca-se a tag áudio
+        atribui o caminho ao atributo src e adicionamos o parâmetro control e autoplay </p>
+    <pre>
+    <code>
+    &lt;audio src="audio.mp3" control autoplay&gt;Texto&lt;/audio&gt;
+    </code>
+</pre>
+    <p>O parêmetro control adiciona á pagina o botão de play e pause. o Parêmetro autoplay toca o áudio automaticamente
+        quando o a página é carregada</p>
+    <p>O problema desse método é quando o formato de áudio não é ddefinido corretamente. Levando assim a um erro de
+        suporte. Alguns navegadores podem não ter um pleno suporte para áudio, então podemos oferecer a opção de baixar
+        os audios caso o navegador não tenha suporte.</p>
+    <p>Para resolvermos o problema de suporte e fornecer o arquivo baixável, adicionamos a tag audio, mas não do mesmo
+        jeito que vimos acima, mas sim como vimos no conteúdo de imagem dinâmica:</p>
+    <pre>
+    <code>
+        &lt;audio preload="metadata" controls autoplay loop&gt;
+            &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+            &lt;source src="Funky Carioca - Quincas Moreira.wav" type="audio/wav"&gt;
+            &lt;source src="audio.ogg" type="audio/ogg"&gt;
+            &lt;p&gt;Seu navegador não suporta esse áudio. &lt;a href="audio.mp3"&gt;clique aqui&lt;/a&gt; para o download&lt;/p&gt;
+        &lt;/audio&gt;
+    </code>
+</pre>
+    <p>Para esse exemplo usaremos um áudio obtido através da biblioteca de áudio do Youtube studio</p>
+
+
+    <audio preload="metadata" controls autoplay loop>
+        <source src="Funky Carioca - Quincas Moreira.mp3" type="audio/mpeg">
+        <source src="Funky Carioca - Quincas Moreira.wav" type="audio/wav">
+        <source src="Funky Carioca - Quincas Moreira.ogg" type="audio/ogg">
+        <p>Seu navegador não suporta esse áudio. <a href="Funky Carioca - Quincas Moreira.mp3"
+                download="Funky Carioca - Quincas Moreira.mp3" type="audio/mpeg">clique aqui</a> para o download</p>
+    </audio>
+    <p>Nesse método temos alguns aspectos que valem ser destacados: </p>
+<dl>
+    <dt>-Tag source</dt>
+        <dd>Fornece o caminho e o tipo de mídia indexada.</dd>
+    <dt>-Atributo preload</dt>
+        <dd>O atributo pode levar 3 valores:
+            <ul>
+                <li>metadata: Que carrega somente algumas informações do áudio como tamanho e duração.</li>
+                <li>none: Que não carrega nada até que o usuário clique para rodar a mídia</li>
+                <li>auto: Que carrega tudo a respeito da mídia ao carregar a página.</li>
+            </ul>
+        </dd>
+    <dt>-Loop</dt>
+        <dd>Como o próprio nome diz faz com que o áudio seja tocado em loop.</dd>    
+</dl>
+
+<p>Uma observação importante é sobre a maneira que o site roda. Quando colocamos anexos de mídias muito grandes, nossa página fica com arquivo muito extenso a ser carregado o que acarreta em uma página lenta. Com isso, caso o anexo seja muito pesado, atribuir "auto" ao parâmetro "preload" não se faz uma boa escolha de desenvolvimento.</p>
+
+<h2>Formatos de áudio</h2>
+<p>Assim como imagens, os áudios também possuem formatos diferentes. Esses formatos dizem resepeito a maneira que foi feita a compressão de áudio e sobre a qualidade.</p>
+
+<dl>
+    <dt>WAV - Waveform Audio File Format(.wav)</dt>
+        <dd>O WAV é um formato de áudio sem compressão, o que significa que mantém toda a qualidade original do áudio, mas resulta em arquivos significativamente maiores. Oferece qualidade de áudio de alta fidelidade, sendo uma escolha comum para profissionais de áudio e produção musical.Amplamente usado em estúdios de gravação e produção musical devido à alta qualidade, mas menos comum para distribuição online devido ao tamanho dos arquivos.</dd>
+    <dt>OGG - Ogg Vorbis(.ogg)</dt>
+        <dd> O OGG é um formato de áudio com perdas, semelhante ao MP3, mas usa um algoritmo de compressão diferente chamado Vorbis. Oferece boa qualidade de áudio com taxas de compressão eficientes. Alguns argumentam que, em determinadas taxas de bits, o OGG pode fornecer qualidade perceptualmente semelhante ao MP3 com tamanhos de arquivo menores. O formato OGG é comumente usado para streaming de áudio na web e em jogos devido à sua eficiência de compressão. Também é um formato de escolha em software de código aberto devido à sua natureza livre de patentes. </dd>
+    <dt>MP3 = Mpeg Audio Layer III (.mp3)</dt>
+        <dd>O MP3 é um formato de áudio com perdas, o que significa que ele comprime o arquivo removendo algumas informações consideradas menos perceptíveis pelo ouvido humano. Isso resulta em arquivos menores em comparação com o áudio não comprimido. Embora haja perda de qualidade de áudio devido à compressão, a maioria das pessoas acha que a diferença é aceitável, especialmente para aplicações como streaming e armazenamento de música em dispositivos portáteis. Amplamente utilizado para distribuição de música online, streaming e armazenamento de arquivos de áudio.
+        </dd>
+</dl>
+</body>
+</html>
