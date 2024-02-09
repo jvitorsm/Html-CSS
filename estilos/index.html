@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilo.css">   
+</head>
+<body>
+    <h1>In Line</h1>
+    <p>Dentre as técnicas de estilização, a in line é a mais básica. Ela se funda na aplicação do parâmetro "style" dentro das tags que serão estilizadas separando cada argumento, tais como: font-size, font-family, color, bakground-color, por ponto e vírgula </p>
+    <h2>Dentor de cada elemento</h2>
+    <p>Caso a estilização fiquei dentro das tags componentes do corpo, toda marcação adicionada dentro do wrap: "body" deve ter sua estilização definida novamente. Segue exemplo:</p>
+    <div>
+
+        <picture>
+            <source media="(max-width: 300px)" srcset="imagens_estilos/imagem0_300.png" type= "image/png">
+            <img src="imagens_estilos/imagem0.png" alt="corpo basico html"><br><sub>imagem 0</sub>
+        </picture>
+    </div>
+    <p>Como vemos na imagem, o que está em laranja dentro dos colchetes angulados em h1 e p são os determinantes de estilos daquelas marcações.</p>
+    <h2>Dentro da tag body</h2>
+    <div><img src="imagens_estilos/imagem1.png" alt="#"><br><sub>imagem 1</sub></div>
+    <p>Quando estipulamos os parâmetros de estilo na tag "body" configuramos os estilos para os elementos da página de uma vez só, contudo dessa manéira o conteúdo da página fica mesclado com os estilos, fazendo com que o código fique muito denso e bagunçado de maneira que atualizações e modificações sejam dificultadas, além disso essa estilização da uma leve impressão de rigidez ao estilo, no sentido de que tudo que colocarmos de novo aparecerá ja com as configurações do body e sempre que precisar mudar teremops de achar o elemento no conteúdo e modificalo localmente</p> 
+    <p>De ambos os jeitos o resultado é o mesmo:</p>
+    <div>
+        <picture>
+            <source media="(max-width: 300px)" srcset="imagens_estilos/imagem2_300.png" type= "image/png">
+            <img src="imagens_estilos/imagem2.png" alt="corpo basico html"><br><sub>imagem 2</sub>
+        </picture>
+    </div>
+<h1>Estilos internos</h1>
+<p>
+    Com o intuito de deixar o conteúdo mais organizado, podemos optar por uma outra estratégia de estilização. Para isso vamos marcar a tag "style" dentro do camnpo "head" nele faremos referências às tags que queremos modificar e especificaremos como queremos ela usando o CSS, porém ainda internamente ao arquivo html.</p>
+    <div>
+    <picture>
+        <source media="(max-width:300px)" srcset="imagens_estilos\imagem2_300.png" type="image/png">
+        <img src="imagens_estilos\imagem3.png" alt="codigo html html"><br><sub>imagem 3</sub>
+    </picture>
+    </div>
+<p>
+    Esse ambas as formas apresentadas o resultado é o mesmo exemplificado na image dois, mas agora vc tem cada elemento modificado individualmente e de maneira separada do resto do conteúdo, facilitando a compreensão e a edição do seu desenvolvimento. </p>
+<p>
+    Esse último fato, torna trabalhosa a edição de sites mais complexos com muitas abas navegáveis, pois, como o estilo está em dentro de cada corpo, para que essa estilização fosse copiada em outraspáginas, deveriamos copiar a seção estilos e copiar naquelas necessárias.</p>
+<p><strong>Porém, há uma estratégia de estilização, que por acaso é a mais usada, que são os estilos esternos <a href="pagII.html" target="_self">clique aqui</a> para a próxima página </strong></p>
+</body>
+</html>

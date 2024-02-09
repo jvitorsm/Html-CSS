@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+body{
+    background-color: #6A5ACD; 
+    text-align: justify;
+    margin-right: 160px;
+    margin-left: 80px;
+}
+
+p{
+    color:white;
+    font-size: 21px;
+}
+        
+h1{
+    color:black; font-size: 45px;
+    text-align: center;
+}
+
+h2{
+    font-size: 30px;
+}
+        
+code{
+    color: black;
+}
+        
+div{
+    text-align: center;
+}
+
+sub{
+    color: #D2691E;
+}
+code{
+    background-color:rgb(157, 60, 243);
+    font-size: 21px;
+}
+ul{
+    color:white;
+    font-size: 21px; 
+}
